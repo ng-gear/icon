@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, ViewEncapsulation } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
 
 import { NggIconRegistryService } from './icon-registry.service';
 
@@ -11,7 +12,7 @@ export class IconComponent implements OnChanges {
   private readonly iconRegistry: NggIconRegistryService;
 
   @Input() iconName: string;
-  iconSvg: string | null = null;
+  @HostBinding('innerHTML') iconSvg: SafeHtml | null = null;
 
   constructor(iconRegistry: NggIconRegistryService) {
     this.iconRegistry = iconRegistry;
@@ -19,8 +20,7 @@ export class IconComponent implements OnChanges {
 
   ngOnChanges(changes): void {
     if (changes.iconName && this.iconName) {
-      this.iconRegistry;
+      this.iconRegistry.getIcon(this.iconName).subscribe((svg) => this.iconSvg = svg);
     }
-    // this.iconRegistry;
   }
 }

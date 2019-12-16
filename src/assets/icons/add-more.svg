@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_tip">
+            <g id="Group" transform="translate(1.000000, 1.000000)">
+                <ellipse id="Oval-Copy-2" stroke="#D89D28" stroke-width="0.7" fill="#F6DA65" cx="5.33333333" cy="8.61538462" rx="5.68333333" ry="5.73461538"></ellipse>
+                <ellipse id="Oval-Copy-2" fill="#BA842B" cx="5.33333333" cy="8.61538462" rx="4.26666667" ry="4.30769231"></ellipse>
+                <ellipse id="Oval-Copy" stroke="#E7AC36" stroke-width="0.7" fill="#FFE680" cx="9.6" cy="6.46153846" rx="6.75" ry="6.81153846"></ellipse>
+                <ellipse id="Oval-Copy" fill="#E6B057" cx="9.6" cy="6.46153846" rx="5.33333333" ry="5.38461538"></ellipse>
+                <path d="M9.19615385,6.05769231 L9.19615385,3.61153846 C9.19615385,3.4182388 9.35285418,3.26153846 9.54615385,3.26153846 L9.65384615,3.26153846 C9.84714582,3.26153846 10.0038462,3.4182388 10.0038462,3.61153846 L10.0038462,6.05769231 L12.45,6.05769231 C12.6432997,6.05769231 12.8,6.21439265 12.8,6.40769231 L12.8,6.51538462 C12.8,6.70868428 12.6432997,6.86538462 12.45,6.86538462 L10.0038462,6.86538462 L10.0038462,9.31153846 C10.0038462,9.50483812 9.84714582,9.66153846 9.65384615,9.66153846 L9.54615385,9.66153846 C9.35285418,9.66153846 9.19615385,9.50483812 9.19615385,9.31153846 L9.19615385,6.86538462 L6.75,6.86538462 C6.55670034,6.86538462 6.4,6.70868428 6.4,6.51538462 L6.4,6.40769231 C6.4,6.21439265 6.55670034,6.05769231 6.75,6.05769231 L9.19615385,6.05769231 Z" id="Combined-Shape" fill="#FFE680"></path>
+            </g>
+        </g>
+    </g>
+</svg>

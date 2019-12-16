@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>star_border - material</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_tip_receiver/standart" transform="translate(-2.000000, -2.000000)" fill="#9FA3A7">
+            <path d="M9.488,12.062 L12.296,13.736 L11.558,10.55 L14.06,8.354 L10.748,8.084 L9.488,5.06 L8.228,8.084 L4.916,8.354 L7.418,10.55 L6.68,13.736 L9.488,12.062 Z M16.976,7.418 L12.908,10.964 L14.132,16.238 L9.488,13.43 L4.844,16.238 L6.086,10.964 L2,7.418 L7.382,6.95 L9.488,2 L11.594,6.95 L16.976,7.418 Z" id="star_border---material"></path>
+        </g>
+    </g>
+</svg>

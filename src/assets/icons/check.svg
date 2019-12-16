@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-2" points="6.18181818 10.0227273 3.79545455 7.63636364 3 8.43181818 6.18181818 11.6136364 13 4.79545455 12.2045455 4"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-16x16-/-Check" transform="translate(-3.000000, -4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Fill-1" fill="#676767" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

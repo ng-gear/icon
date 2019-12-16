@@ -1,0 +1,17 @@
+:host {
+  --ngg-icon-size: 24px;
+
+  display: inline-block;
+  fill: currentColor;
+  font-size: var(--ngg-icon-size);
+  height: var(--ngg-icon-size);
+  overflow: hidden;
+  width: var(--ngg-icon-size);
+}
+
+::ng-deep {
+  svg {
+    height: var(--ngg-icon-size);
+    width: var(--ngg-icon-size);
+  }
+}
