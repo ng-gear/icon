@@ -23,7 +23,7 @@ export class NggIconRegistryService {
   private readonly iconUrlsMap = new Map<string, string>();
   private readonly iconRequests = new Map<string, Observable<SafeHtml>>();
 
-  constructor(httpClient: HttpClient, @Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig, domSanitizer: DomSanitizer) {
+  constructor(httpClient: HttpClient, domSanitizer: DomSanitizer, @Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig) {
     this.httpClient = httpClient;
     this.domSanitizer = domSanitizer;
 

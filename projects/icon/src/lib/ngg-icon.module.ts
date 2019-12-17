@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { NggIconsConfig, NggIconRegistryService, NGG_ICONS_CONFIG } from './icon-registry.service';
+import { NggIconRegistryService } from './icon-registry.service';
 import { IconComponent } from './icon.component';
 
 @NgModule({
@@ -10,17 +10,12 @@ import { IconComponent } from './icon.component';
   exports: [IconComponent]
 })
 export class NggIconModule {
-  static forRoot(iconsConfig?: NggIconsConfig): ModuleWithProviders<NggIconModule> {
-    const providers = iconsConfig ? [
-      { provide: NGG_ICONS_CONFIG, useValue: iconsConfig },
-      NggIconRegistryService
-    ] : [
-      NggIconRegistryService
-    ];
-
+  static forRoot(): ModuleWithProviders<NggIconModule> {
     return {
       ngModule: NggIconModule,
-      providers
+      providers: [
+        NggIconRegistryService
+      ]
     };
   }
 
