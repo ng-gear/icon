@@ -1,11 +1,12 @@
+import { isPlatformServer, APP_BASE_HREF } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable, InjectionToken } from '@angular/core';
+import { Inject, Injectable, InjectionToken, Optional, PLATFORM_ID } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { clearUrlSlashes } from '../helpers';
+import { clearUrlSlashes, isHostRelativeUrl } from '../helpers';
 
 export interface NggIconsConfig {
   iconsBase: string;
@@ -14,18 +15,27 @@ export interface NggIconsConfig {
   };
 }
 
-export const NGG_ICONS_CONFIG = new InjectionToken('ngg-icons-config');
+export const NGG_ICONS_CONFIG = new InjectionToken<NggIconsConfig>('ngg-icons-config');
 
 @Injectable()
 export class NggIconRegistryService {
   private readonly httpClient: HttpClient;
   private readonly domSanitizer: DomSanitizer;
+  private readonly appBase?: string;
+
   private readonly iconUrlsMap = new Map<string, string>();
   private readonly iconRequests = new Map<string, Observable<SafeHtml>>();
 
-  constructor(httpClient: HttpClient, domSanitizer: DomSanitizer, @Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig) {
+  constructor(
+    httpClient: HttpClient,
+    domSanitizer: DomSanitizer,
+    @Inject(PLATFORM_ID) platformId: any,
+    @Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig,
+    @Inject(APP_BASE_HREF) @Optional() baseHref?: string
+  ) {
     this.httpClient = httpClient;
     this.domSanitizer = domSanitizer;
+    this.appBase = isPlatformServer(platformId) ? baseHref : baseHref || location.origin;
 
     this.registerIcons(iconsConfig);
   }
@@ -52,9 +62,14 @@ export class NggIconRegistryService {
 
   registerIcons(iconsConfig: NggIconsConfig) {
     const { icons, iconsBase } = iconsConfig;
+
+    const absoluteBase = isHostRelativeUrl(iconsBase) && this.appBase
+      ? `${clearUrlSlashes(this.appBase)}/${clearUrlSlashes(iconsBase)}`
+      : clearUrlSlashes(iconsBase);
+
     Object.keys(icons).forEach((icon) => {
       const iconPath = icons[icon];
-      this.registerIcon(icon, `${clearUrlSlashes(iconsBase)}/${clearUrlSlashes(iconPath)}`);
+      this.registerIcon(icon, `${absoluteBase}/${clearUrlSlashes(iconPath)}`);
     });
   }
 

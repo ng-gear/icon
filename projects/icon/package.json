@@ -1,10 +1,9 @@
 {
   "name": "@ng-gear/icon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0",
-    "tslint": "~5.19.0"
+    "@angular/core": "^8.2.0"
   },
   "license": "MIT"
 }
