@@ -4,14 +4,14 @@
     <title>Fill 1</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <polygon id="path-2" points="6.18181818 10.0227273 3.79545455 7.63636364 3 8.43181818 6.18181818 11.6136364 13 4.79545455 12.2045455 4"></polygon>
+        <polygon id="path-1" points="6.18181818 10.0227273 3.79545455 7.63636364 3 8.43181818 6.18181818 11.6136364 13 4.79545455 12.2045455 4"></polygon>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Icon-/-16x16-/-Check" transform="translate(-3.000000, -4.000000)">
             <mask id="mask-2" fill="white">
-                <use xlink:href="#path-2"></use>
+                <use xlink:href="#path-1"></use>
             </mask>
-            <use id="Fill-1" fill="#676767" xlink:href="#path-2"></use>
+            <use id="Fill-1" fill="#676767" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>

@@ -4,14 +4,14 @@
     <title>Mask</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M12.984375,14.015625 L12.984375,9.984375 L11.015625,9.984375 L11.015625,14.015625 L12.984375,14.015625 Z M12.984375,18 L12.984375,15.984375 L11.015625,15.984375 L11.015625,18 L12.984375,18 Z M0.984375,21 L12,2.015625 L23.015625,21 L0.984375,21 Z" id="path-21"></path>
+        <path d="M12.984375,14.015625 L12.984375,9.984375 L11.015625,9.984375 L11.015625,14.015625 L12.984375,14.015625 Z M12.984375,18 L12.984375,15.984375 L11.015625,15.984375 L11.015625,18 L12.984375,18 Z M0.984375,21 L12,2.015625 L23.015625,21 L0.984375,21 Z" id="path-1"></path>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icon-/-24x24-/-alert" transform="translate(-1.000000, -2.000000)">
             <mask id="mask-2" fill="white">
-                <use xlink:href="#path-21"></use>
+                <use xlink:href="#path-1"></use>
             </mask>
-            <use id="Mask" fill="#000000" xlink:href="#path-21"></use>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>

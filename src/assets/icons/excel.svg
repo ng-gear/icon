@@ -4,7 +4,7 @@
     <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <circle id="path-3" cx="12" cy="12" r="12"></circle>
+        <circle id="path-1" cx="12" cy="12" r="12"></circle>
         <filter x="-29.2%" y="-20.8%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
@@ -15,8 +15,8 @@
         <g id="ic_XLS" transform="translate(4.000000, 2.000000)">
             <g id="Group-2">
                 <g id="Oval-5">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-3"></use>
-                    <use fill="#2E7D32" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#2E7D32" fill-rule="evenodd" xlink:href="#path-1"></use>
                 </g>
                 <g id="excel" transform="translate(4.000000, 5.000000)" fill-rule="nonzero">
                     <path d="M15.5,12.1123527 L8.5,12.1123527 C8.224,12.1123527 8,11.9041535 8,11.6476224 C8,11.3910913 8,2.60954772 8,2.3530166 C8,2.09648548 8.224,1.88828631 8.5,1.88828631 L15.5,1.88828631 C15.776,1.88828631 16,2.09648548 16,2.3530166 L16,11.6476224 C16,11.9041535 15.776,12.1123527 15.5,12.1123527 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.936"></path>

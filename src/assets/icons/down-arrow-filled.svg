@@ -4,14 +4,14 @@
     <title>Mask</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <polygon id="path-8" points="6.984375 9.984375 17.015625 9.984375 12 15"></polygon>
+        <polygon id="path-1" points="6.984375 9.984375 17.015625 9.984375 12 15"></polygon>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icon-/-24x24-/-down" transform="translate(-7.000000, -9.000000)">
             <mask id="mask-2" fill="white">
-                <use xlink:href="#path-8"></use>
+                <use xlink:href="#path-1"></use>
             </mask>
-            <use id="Mask" fill="#000000" xlink:href="#path-8"></use>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>

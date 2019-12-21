@@ -8,14 +8,14 @@ export type SizeName = 'tiny' | 'small' | 'normal' | 'large' | 'extra-large';
 @Component({
   selector: 'ngg-icon',
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  styleUrls: ['./icon.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class IconComponent implements OnChanges {
   private readonly iconRegistry: NggIconRegistryService;
 
   @Input() iconName: string;
   @Input() @HostBinding('attr.ngg-icon-size') iconSize: SizeName = 'normal';
-
   @HostBinding('innerHTML') iconSvg: SafeHtml | null = null;
 
   constructor(iconRegistry: NggIconRegistryService) {

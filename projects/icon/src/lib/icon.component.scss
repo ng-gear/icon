@@ -9,11 +9,13 @@
   width: var(--ngg-icon-size);
 }
 
-::ng-deep {
-  svg {
-    height: var(--ngg-icon-size);
-    width: var(--ngg-icon-size);
-  }
+.svg-container {
+  display: contents;
+}
+
+svg {
+  height: var(--ngg-icon-size);
+  width: var(--ngg-icon-size);
 }
 
 :host([ngg-icon-size="tiny"]) {
