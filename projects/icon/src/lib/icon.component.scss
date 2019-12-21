@@ -1,7 +1,7 @@
 :host {
   --ngg-icon-size: 24px;
 
-  display: inline-block;
+  display: inline-flex;
   fill: currentColor;
   font-size: var(--ngg-icon-size);
   height: var(--ngg-icon-size);
@@ -14,4 +14,24 @@
     height: var(--ngg-icon-size);
     width: var(--ngg-icon-size);
   }
+}
+
+:host([ngg-icon-size="tiny"]) {
+  --ngg-icon-size: 12px;
+}
+
+:host([ngg-icon-size="small"]) {
+  --ngg-icon-size: 16px;
+}
+
+:host([ngg-icon-size="normal"]) {
+  --ngg-icon-size: 24px;
+}
+
+:host([ngg-icon-size="large"]) {
+  --ngg-icon-size: 32px;
+}
+
+:host([ngg-icon-size="extra-large"]) {
+  --ngg-icon-size: 48px;
 }
