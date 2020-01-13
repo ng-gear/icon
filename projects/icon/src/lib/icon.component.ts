@@ -15,8 +15,10 @@ export class IconComponent implements OnChanges {
   private readonly iconRegistry: NggIconRegistryService;
 
   @Input() iconName: string;
-  @Input() @HostBinding('attr.ngg-icon-size') iconSize: SizeName = 'normal';
-  @HostBinding('innerHTML') iconSvg: SafeHtml | null = null;
+  @Input() @HostBinding('attr.ngg-icon-size') iconSize: SizeName | null = null;
+  @Input() @HostBinding('attr.ngg-is-flat-icon') isFlat = true;
+
+  iconSvg: SafeHtml | null = null;
 
   constructor(iconRegistry: NggIconRegistryService) {
     this.iconRegistry = iconRegistry;

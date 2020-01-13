@@ -5,3 +5,11 @@ ngg-icon {
 h2 {
   margin: 0;
 }
+
+.red {
+  color: red;
+
+  ngg-icon:nth-child(2n) {
+    --ngg-icon-color: blue;
+  }
+}

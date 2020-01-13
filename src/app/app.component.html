@@ -1,58 +1,18 @@
-<ngg-icon iconName="add-more"></ngg-icon>
-<ngg-icon iconName="add"></ngg-icon>
-<ngg-icon iconName="apps"></ngg-icon>
-<ngg-icon iconName="arca-filled"></ngg-icon>
-<ngg-icon iconName="arca"></ngg-icon>
-<ngg-icon iconName="bell-filled"></ngg-icon>
-<ngg-icon iconName="bell"></ngg-icon>
-<ngg-icon iconName="card-green"></ngg-icon>
-<ngg-icon iconName="card"></ngg-icon>
-<ngg-icon iconName="check-circle-blue"></ngg-icon>
-<ngg-icon iconName="check-circle-yellow"></ngg-icon>
-<ngg-icon iconName="check-circle"></ngg-icon>
-<ngg-icon iconName="check"></ngg-icon>
-<ngg-icon iconName="clear-filter"></ngg-icon>
-<ngg-icon iconName="close"></ngg-icon>
-<ngg-icon iconName="currency-exchange"></ngg-icon>
-<ngg-icon iconName="double-arrow-left"></ngg-icon>
-<ngg-icon iconName="double-arrow-right"></ngg-icon>
-<ngg-icon iconName="down-arrow-filled"></ngg-icon>
-<ngg-icon iconName="down-arrow"></ngg-icon>
-<ngg-icon iconName="edit-gray"></ngg-icon>
-<ngg-icon iconName="enter"></ngg-icon>
-<ngg-icon iconName="envelope-filled"></ngg-icon>
-<ngg-icon iconName="envelope-gray"></ngg-icon>
-<ngg-icon iconName="envelope"></ngg-icon>
-<ngg-icon iconName="error"></ngg-icon>
-<ngg-icon iconName="excel"></ngg-icon>
-<ngg-icon iconName="eye"></ngg-icon>
-<ngg-icon iconName="filter-2"></ngg-icon>
-<ngg-icon iconName="filter-gray"></ngg-icon>
-<ngg-icon iconName="info-filled"></ngg-icon>
-<ngg-icon iconName="info-gray"></ngg-icon>
-<ngg-icon iconName="info"></ngg-icon>
-<ngg-icon iconName="left-arrow-filled"></ngg-icon>
-<ngg-icon iconName="left-arrow-gray"></ngg-icon>
-<ngg-icon iconName="left-arrow"></ngg-icon>
-<ngg-icon iconName="master-card-filled"></ngg-icon>
-<ngg-icon iconName="master-card"></ngg-icon>
-<ngg-icon iconName="money"></ngg-icon>
-<ngg-icon iconName="pause-red"></ngg-icon>
-<ngg-icon iconName="pause-yellow"></ngg-icon>
-<ngg-icon iconName="pause"></ngg-icon>
-<ngg-icon iconName="people"></ngg-icon>
-<ngg-icon iconName="right-arrow-filled"></ngg-icon>
-<ngg-icon iconName="right-arrow-gray"></ngg-icon>
-<ngg-icon iconName="right-arrow"></ngg-icon>
-<ngg-icon iconName="search"></ngg-icon>
-<ngg-icon iconName="settings-filled"></ngg-icon>
-<ngg-icon iconName="star-filled"></ngg-icon>
-<ngg-icon iconName="star"></ngg-icon>
-<ngg-icon iconName="stop-sign"></ngg-icon>
-<ngg-icon iconName="up-arrow"></ngg-icon>
-<ngg-icon iconName="visa-filled"></ngg-icon>
-<ngg-icon iconName="visa"></ngg-icon>
-<ngg-icon iconName="warning"></ngg-icon>
+<ngg-icon *ngFor="let icon of icons" [iconName]="icon"></ngg-icon>
+
+<div class="red">
+  <h2>red or blue</h2>
+
+  <div>
+    <h4>flat</h4>
+    <ngg-icon *ngFor="let icon of icons" [iconName]="icon"></ngg-icon>
+  </div>
+
+  <div>
+    <h4>not flat</h4>
+    <ngg-icon *ngFor="let icon of icons" [iconName]="icon" [isFlat]="false"></ngg-icon>
+  </div>
+</div>
 
 <div>
   <h1>native sizes</h1>
@@ -79,7 +39,7 @@
 </div>
 
 <div class="custom-size">
-  <h1>custom-size 60px</h1>
+  <h1>font-size: 60px</h1>
 
   <app-custom-size></app-custom-size>
 </div>

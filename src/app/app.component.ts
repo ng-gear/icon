@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+
+import { NggIconsConfig, NGG_ICONS_CONFIG } from '../../projects/icon/src/lib/icon-registry.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  readonly icons: string[];
+
+  constructor(@Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig) {
+    this.icons = Object.keys(iconsConfig.icons);
+  }
 }

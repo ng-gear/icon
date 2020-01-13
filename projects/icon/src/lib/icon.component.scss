@@ -1,9 +1,7 @@
 :host {
-  --ngg-icon-size: 24px;
-
+  --ngg-icon-size: 1em;
   display: inline-flex;
   fill: currentColor;
-  font-size: var(--ngg-icon-size);
   height: var(--ngg-icon-size);
   overflow: hidden;
   width: var(--ngg-icon-size);
@@ -19,21 +17,31 @@ svg {
 }
 
 :host([ngg-icon-size="tiny"]) {
-  --ngg-icon-size: 12px;
+  --ngg-icon-size: .75em;
 }
 
 :host([ngg-icon-size="small"]) {
-  --ngg-icon-size: 16px;
+  --ngg-icon-size: .5em;
 }
 
 :host([ngg-icon-size="normal"]) {
-  --ngg-icon-size: 24px;
+  --ngg-icon-size: 1em;
 }
 
 :host([ngg-icon-size="large"]) {
-  --ngg-icon-size: 32px;
+  --ngg-icon-size: 1.5em;
 }
 
 :host([ngg-icon-size="extra-large"]) {
-  --ngg-icon-size: 48px;
+  --ngg-icon-size: 2em;
+}
+
+:host(:not([ngg-is-flat-icon="false"])) {
+  svg {
+    fill: var(--ngg-icon-color, currentColor);
+
+    path, polygon, ellipse, circle, rect {
+      fill: var(--ngg-icon-color, currentColor);
+    }
+  }
 }
