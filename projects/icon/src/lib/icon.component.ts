@@ -16,7 +16,6 @@ export class IconComponent implements OnChanges {
 
   @Input() iconName: string;
   @Input() @HostBinding('attr.ngg-icon-size') iconSize: SizeName | null = null;
-  @Input() @HostBinding('attr.ngg-is-flat-icon') isFlat = true;
 
   iconSvg: SafeHtml | null = null;
 

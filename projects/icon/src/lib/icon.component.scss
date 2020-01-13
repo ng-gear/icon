@@ -35,13 +35,3 @@ svg {
 :host([ngg-icon-size="extra-large"]) {
   --ngg-icon-size: 2em;
 }
-
-:host(:not([ngg-is-flat-icon="false"])) {
-  svg {
-    fill: var(--ngg-icon-color, currentColor);
-
-    path, polygon, ellipse, circle, rect {
-      fill: var(--ngg-icon-color, currentColor);
-    }
-  }
-}
