@@ -6,7 +6,7 @@ describe('NggIconRegistryModule', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: NggIconRegistryService = TestBed.get(NggIconRegistryService);
+    const service: NggIconRegistryService = TestBed.inject(NggIconRegistryService);
     expect(service).toBeTruthy();
   });
 });

@@ -15,7 +15,7 @@ export interface NggIconsConfig {
   };
 }
 
-export const NGG_ICONS_CONFIG = new InjectionToken<NggIconsConfig>('ngg-icons-config');
+export const NGG_ICONS_CONFIG = new InjectionToken<NggIconsConfig>('NGG_ICONS_CONFIG');
 
 @Injectable()
 export class NggIconRegistryService {
