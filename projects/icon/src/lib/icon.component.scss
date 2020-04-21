@@ -1,5 +1,5 @@
 :host {
-  --ngg-icon-size: 1em;
+  --ngg-icon-size: 1rem;
   display: inline-flex;
   fill: currentColor;
   height: var(--ngg-icon-size);
@@ -17,21 +17,21 @@ svg {
 }
 
 :host([ngg-icon-size="tiny"]) {
-  --ngg-icon-size: .75em;
+  --ngg-icon-size: .75rem;
 }
 
 :host([ngg-icon-size="small"]) {
-  --ngg-icon-size: .5em;
+  --ngg-icon-size: 1rem;
 }
 
 :host([ngg-icon-size="normal"]) {
-  --ngg-icon-size: 1em;
+  --ngg-icon-size: 1.5rem;
 }
 
 :host([ngg-icon-size="large"]) {
-  --ngg-icon-size: 1.5em;
+  --ngg-icon-size: 2em;
 }
 
 :host([ngg-icon-size="extra-large"]) {
-  --ngg-icon-size: 2em;
+  --ngg-icon-size: 3em;
 }
