@@ -47,5 +47,21 @@
     "tslint": "~6.1.1",
     "tslint-jasmine-rules": "^1.6.0",
     "typescript": "~3.7.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ng-gear/icon.git"
+  },
+  "author": "hakobpogh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ng-gear/icon/issues"
+  },
+  "homepage": "https://github.com/ng-gear/icon",
+  "keywords": [
+    "angular",
+    "icon",
+    "ngg",
+    "angular-component"
+  ]
 }

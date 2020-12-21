@@ -5,5 +5,20 @@
     "@angular/common": "^9.0.2",
     "@angular/core": "^9.0.2"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ng-gear/icon.git"
+  },
+  "author": "hakobpogh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ng-gear/icon/issues"
+  },
+  "homepage": "https://github.com/ng-gear/icon",
+  "keywords": [
+    "angular",
+    "icon",
+    "ngg",
+    "angular-component"
+  ]
 }
