@@ -57,6 +57,8 @@ export const iconsConfig: NggIconsConfig = {
     'up-arrow': 'up-arrow.svg',
     'visa-filled': 'visa-filled.svg',
     visa: 'visa.svg',
-    warning: 'warning.svg'
+    warning: 'warning.svg',
+    avatar: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNjA2MTYxO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgNyIgaWQ9IkxheWVyXzciPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE5Ljc1LDE1LjY3YTYsNiwwLDEsMC03LjUxLDBBMTEsMTEsMCwwLDAsNSwyNnYxSDI3VjI2QTExLDExLDAsMCwwLDE5Ljc1LDE1LjY3Wk0xMiwxMWE0LDQsMCwxLDEsNCw0QTQsNCwwLDAsMSwxMiwxMVpNNy4wNiwyNWE5LDksMCwwLDEsMTcuODksMFoiLz48L2c+PC9zdmc+',
+    camera: 'https://www.flaticon.com/svg/static/icons/svg/3947/3947006.svg'
   }
 };

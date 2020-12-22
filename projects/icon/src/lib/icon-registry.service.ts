@@ -6,7 +6,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { clearUrlSlashes, isHostRelativeUrl } from '../helpers';
+import { clearUrlSlashes, isAbsoluteUrl, isHostRelativeUrl } from '../helpers';
 
 export interface NggIconsConfig {
   iconsBase: string;
@@ -69,7 +69,7 @@ export class NggIconRegistryService {
 
     Object.keys(icons).forEach((icon) => {
       const iconPath = icons[icon];
-      this.registerIcon(icon, `${absoluteBase}/${clearUrlSlashes(iconPath)}`);
+      this.registerIcon(icon, isAbsoluteUrl(iconPath) ? iconPath : `${absoluteBase}/${clearUrlSlashes(iconPath)}`);
     });
   }
 
