@@ -1,6 +1,7 @@
 {
   "name": "icon",
   "version": "0.1.1",
+  "enableIvy": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

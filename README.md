@@ -1,27 +1,81 @@
-# Icon
+# @ng-gear/icon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+@ng-gear/icon library provides the `ngg-icon` component which will make the usage of icons neat and easy in any angular 9.1 project. 
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm install --save @ng-gear/icon
+``` 
+or 
+```bash
+yarn add @ng-gear/icon
+```
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+It is needed to have `icons-config.ts` which should include object with `NggIconsConfig` type to register the icons.
+Take a look at an example of a file bellow.
 
-## Build
+```ts
+import { NggIconsConfig } from "@ng-gear/icon";
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+export const iconsConfig: NggIconsConfig = {
+  iconsBase: "/assets/icons",
+  icons: {
+    icon1: "your-icon.svg",
+    icon2: "your-icon.svg",
+    icon3: "your-icon.svg",
+    icon4: "data:meta-type;base64,your-icon-data",
+    icon5: "https://your-icon-url"
+  }
+};
+```
 
-## Running unit tests
+Provide `iconsConfig` as `NGG_ICONS_CONFIG` and import `NggIconModule.forRoot()` in the root module and use it in your html template.
+For child modules you can either import `NggIconModule.forChild()` or just `NggIconModule`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+...
+import { NGG_ICONS_CONFIG, NggIconModule } from "@ng-gear/icon";
 
-## Running end-to-end tests
+...
+import { iconsConfig } from "./icons-config";
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  ...,
+  imports: [
+    ...
+    NggIconModule.forRoot()
+  ],
+  providers: [
+    { provide: NGG_ICONS_CONFIG, useValue: iconsConfig }
+  ]
+})
+export class RootModule { }
+```
 
-## Further help
+For the `html` you should use `<ngg-icon>` by providing `iconName` and `iconSize` like in the example bellow.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+<ngg-icon iconName="icon1" iconSize="tiny"></ngg-icon>
+<ngg-icon iconName="icon2" iconSize="small"></ngg-icon>
+<ngg-icon iconName="icon3" iconSize="normal"></ngg-icon>
+<ngg-icon iconName="icon4" iconSize="large"></ngg-icon>
+<ngg-icon iconName="icon5" iconSize="extra-large"></ngg-icon>
+Custom size 
+<div [ngStyle]="{fontSize: 60px}">
+    <ngg-icon iconName="icon1" iconSize="tiny"></ngg-icon>
+    <ngg-icon iconName="icon2" iconSize="small"></ngg-icon>
+    <ngg-icon iconName="icon3" iconSize="normal"></ngg-icon>
+    <ngg-icon iconName="icon4" iconSize="large"></ngg-icon>
+    <ngg-icon iconName="icon5" iconSize="extra-large"></ngg-icon>
+</div>
+```
+
+## Components
+###**`<ngg-icon></ngg-icon>`**
+### Attributes
+####**`iconName: string`** 
+####**`iconSize: tiny | small | normal | large | extra-large`**
+
