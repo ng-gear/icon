@@ -1,10 +1,10 @@
 :host {
-  --ngg-icon-size: 1rem;
+  --ngg-icon-base-size: var(--ngg-icon-size, 1rem);
   display: inline-flex;
   fill: currentColor;
-  height: var(--ngg-icon-size);
+  height: var(--ngg-icon-base-size);
   overflow: hidden;
-  width: var(--ngg-icon-size);
+  width: var(--ngg-icon-base-size);
 }
 
 .svg-container {
@@ -12,26 +12,27 @@
 }
 
 svg {
-  height: var(--ngg-icon-size);
-  width: var(--ngg-icon-size);
+  height: var(--ngg-icon-base-size);
+  width: var(--ngg-icon-base-size);
 }
 
 :host([ngg-icon-size="tiny"]) {
-  --ngg-icon-size: .75rem;
+  //--ngg-icon-size: var(--ngg-icon-size-tiny, .75rem);
+  --ngg-icon-base-size: var(--ngg-icon-size-tiny, calc(var(--ngg-icon-size, 1rem) * .75));
 }
 
 :host([ngg-icon-size="small"]) {
-  --ngg-icon-size: 1rem;
+  --ngg-icon-base-size: var(--ngg-icon-size-small, var(--ngg-icon-size, 1rem));
 }
 
 :host([ngg-icon-size="normal"]) {
-  --ngg-icon-size: 1.5rem;
+  --ngg-icon-base-size: var(--ngg-icon-size-normal, calc(var(--ngg-icon-size, 1rem) * 1.5));
 }
 
 :host([ngg-icon-size="large"]) {
-  --ngg-icon-size: 2em;
+  --ngg-icon-base-size: var(--ngg-icon-size-large, calc(var(--ngg-icon-size, 1rem) * 2));
 }
 
 :host([ngg-icon-size="extra-large"]) {
-  --ngg-icon-size: 3em;
+  --ngg-icon-base-size: var(--ngg-icon-size-extra-large, calc(var(--ngg-icon-size, 1rem) * 3));
 }

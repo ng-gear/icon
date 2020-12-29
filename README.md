@@ -79,3 +79,18 @@ Custom size
 ####**`iconName: string`** 
 ####**`iconSize: tiny | small | normal | large | extra-large`**
 
+### Custom Sizes
+The base `iconSize` is `small`, which is set to `1rem`.
+<br />`tiny` is `0.75 * base-size`,
+<br /> `normal` is `1.5 * base-size`,
+<br />`large` is `2 * base-size`, 
+<br />`extra-large` is `3 * base-size`
+To have custom sized icons you can use `--ngg-icon-size` css variable. This will change the `base-size` to use the given value.
+If you want to customize each of the `iconSize` separately you can use these css variable for corresponding `iconSize`.<br />
+**`--ngg-icon-size-tiny`**, **`--ngg-icon-size-small`**, **`--ngg-icon-size-normal`**, **`--ngg-icon-size-large`**, **`--ngg-icon-size-extra-large`**
+
+```css
+  --ngg-icon-size: 40px;
+  --ngg-icon-size-tiny: 30px;
+  --ngg-icon-size-extra-large: 150px;
+```
