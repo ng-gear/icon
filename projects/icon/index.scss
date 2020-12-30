@@ -1,0 +1,8 @@
+@mixin setNggIconSize($iconSize, $tiny: .5, $small: .75, $large: 1.5, $extraLarge: 2) {
+  --ngg-icon-size: #{$iconSize};
+  --ngg-icon-size-tiny: #{$iconSize * $tiny};
+  --ngg-icon-size-small: #{$iconSize * $small};
+  --ngg-icon-size-normal: #{$iconSize};
+  --ngg-icon-size-large: #{$iconSize * $large};
+  --ngg-icon-size-extra-large: #{$iconSize * $extraLarge};
+}

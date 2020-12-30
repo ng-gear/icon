@@ -1,5 +1,10 @@
+@function getNggIconSize($default: 1rem) {
+  @return var(--ngg-icon-size, $default);
+}
+
 :host {
-  --ngg-icon-base-size: var(--ngg-icon-size, 1rem);
+  --ngg-icon-base-size: #{getNggIconSize()};
+
   display: inline-flex;
   fill: currentColor;
   height: var(--ngg-icon-base-size);
@@ -17,22 +22,21 @@ svg {
 }
 
 :host([ngg-icon-size="tiny"]) {
-  //--ngg-icon-size: var(--ngg-icon-size-tiny, .75rem);
-  --ngg-icon-base-size: var(--ngg-icon-size-tiny, calc(var(--ngg-icon-size, 1rem) * .75));
+  --ngg-icon-base-size: var(--ngg-icon-size-tiny, calc(#{getNggIconSize()} * .5));
 }
 
 :host([ngg-icon-size="small"]) {
-  --ngg-icon-base-size: var(--ngg-icon-size-small, var(--ngg-icon-size, 1rem));
+  --ngg-icon-base-size: var(--ngg-icon-size-small, calc(#{getNggIconSize()} * .75));;
 }
 
 :host([ngg-icon-size="normal"]) {
-  --ngg-icon-base-size: var(--ngg-icon-size-normal, calc(var(--ngg-icon-size, 1rem) * 1.5));
+  --ngg-icon-base-size: var(--ngg-icon-size-normal, #{getNggIconSize()});
 }
 
 :host([ngg-icon-size="large"]) {
-  --ngg-icon-base-size: var(--ngg-icon-size-large, calc(var(--ngg-icon-size, 1rem) * 2));
+  --ngg-icon-base-size: var(--ngg-icon-size-large, calc(#{getNggIconSize()} * 1.5));
 }
 
 :host([ngg-icon-size="extra-large"]) {
-  --ngg-icon-base-size: var(--ngg-icon-size-extra-large, calc(var(--ngg-icon-size, 1rem) * 3));
+  --ngg-icon-base-size: var(--ngg-icon-size-extra-large, calc(#{getNggIconSize()} * 2));
 }

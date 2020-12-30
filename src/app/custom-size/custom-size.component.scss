@@ -1,7 +1,7 @@
+@import "../../../projects/icon/index";
+
 :host {
-  --ngg-icon-size: 40px;
-  --ngg-icon-size-tiny: 30px;
-  --ngg-icon-size-extra-large: 150px;
+  @include setNggIconSize(40px, .4, .8, 2, 4);
 }
 
 h2 {
