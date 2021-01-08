@@ -9,6 +9,7 @@ import { NggIconsConfig, NGG_ICONS_CONFIG } from '../../projects/icon/src/lib/ic
 })
 export class AppComponent {
   readonly icons: string[];
+  selectedIcon = 'check';
 
   constructor(@Inject(NGG_ICONS_CONFIG) iconsConfig: NggIconsConfig) {
     this.icons = Object.keys(iconsConfig.icons);

@@ -1,9 +1,0 @@
-@import "../../../projects/icon/index";
-
-:host {
-  @include setNggIconSize(40px, .4, .8, 2, 4);
-}
-
-h2 {
-  font-size: 24px;
-}

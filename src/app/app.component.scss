@@ -1,7 +1,28 @@
+.icon-select {
+  width: 180px;
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  select {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.native-sized {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
 ngg-icon {
   margin: 5px;
 }
 
-h2 {
-  margin: 0;
-}

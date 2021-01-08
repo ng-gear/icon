@@ -1,31 +1,59 @@
-<ngg-icon *ngFor="let icon of icons" [iconName]="icon"></ngg-icon>
+<div class="icon-select">
+  <span>Please select an icon</span>
+  <select [(ngModel)]="selectedIcon">
+    <option *ngFor="let icon of icons" [value]="icon">{{icon}}</option>
+  </select>
+</div>
+
+<hr/>
 
 <div>
-  <h1>native sizes</h1>
-  <div class="tiny">
-    <h2>tiny</h2>
-    <ngg-icon iconName="check" iconSize="tiny"></ngg-icon>
-  </div>
-  <div class="small">
-    <h2>small</h2>
-    <ngg-icon iconName="check" iconSize="small"></ngg-icon>
-  </div>
-  <div class="normal">
-    <h2>normal</h2>
-    <ngg-icon iconName="check" iconSize="normal"></ngg-icon>
-  </div>
-  <div class="large">
-    <h2>large</h2>
-    <ngg-icon iconName="check" iconSize="large"></ngg-icon>
-  </div>
-  <div class="extra-large">
-    <h2>extra-large</h2>
-    <ngg-icon iconName="check" iconSize="extra-large"></ngg-icon>
+  <h1>Native Sizes</h1>
+  <code>//no adjustments needed. base-size: 1rem</code>
+  <div class="native-sized">
+    <div class="tiny">
+      <h2>tiny: base-size * 0.5</h2>
+      <ngg-icon [iconName]=selectedIcon iconSize="tiny"></ngg-icon>
+    </div>
+    <div class="small">
+      <h2>small: base-size * 0.75</h2>
+      <ngg-icon [iconName]=selectedIcon iconSize="small"></ngg-icon>
+    </div>
+    <div class="normal">
+      <h2>normal: base-size</h2>
+      <ngg-icon [iconName]=selectedIcon iconSize="normal"></ngg-icon>
+    </div>
+    <div class="large">
+      <h2>large: base-size * 1.5</h2>
+      <ngg-icon [iconName]=selectedIcon iconSize="large"></ngg-icon>
+    </div>
+    <div class="extra-large">
+      <h2>extra-large: base-size * 2</h2>
+      <ngg-icon [iconName]=selectedIcon iconSize="extra-large"></ngg-icon>
+    </div>
   </div>
 </div>
 
-<div class="custom-size">
-  <h1>base-size: 40px</h1>
+<hr/>
 
-  <app-custom-size></app-custom-size>
+<div>
+  <h1>Base changed custom sized icons</h1>
+
+  <app-base-changed-custom-size [iconName]="selectedIcon"></app-base-changed-custom-size>
+</div>
+
+<hr/>
+
+<div>
+  <h1>Individually handled custom sized icons</h1>
+
+  <app-individually-handled-custom-size [iconName]="selectedIcon"></app-individually-handled-custom-size>
+</div>
+
+<hr/>
+
+<div>
+  <h1>Custom sized icons using mixin</h1>
+
+  <app-custom-size-mixin [iconName]="selectedIcon"></app-custom-size-mixin>
 </div>

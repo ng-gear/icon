@@ -1,0 +1,17 @@
+:host {
+  --ngg-icon-size-tiny: 15px;
+  --ngg-icon-size-small: 25px;
+  --ngg-icon-size-normal: 30px;
+  --ngg-icon-size-large: 36px;
+  --ngg-icon-size-extra-large: 40px;
+}
+
+.individually-handled {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+h2 {
+  font-size: 20px;
+}

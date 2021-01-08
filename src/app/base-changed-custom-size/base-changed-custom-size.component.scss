@@ -1,0 +1,13 @@
+:host {
+  --ngg-icon-size: 20px;
+}
+
+.base-changed {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h2 {
+    font-size: 20px;
+  }
+}
